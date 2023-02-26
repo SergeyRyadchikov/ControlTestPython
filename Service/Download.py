@@ -7,17 +7,17 @@ from Printer import Printer
 
 class Download():
 
-    def __init__(self, file, count):
-        self.file = file
-        self.count = count
+    # def __init__(self, file, count):
+    #     self.file = file
+    #     self.count = count
 
-    def import_count(self):
-        with open(self.count, 'r', encoding='utf-8') as k:
+    def import_count(count):
+        with open(count, 'r', encoding='utf-8') as k:
             count = k.readlines()
         return int(count[0])
 
-    def import_data(self):
-        with open(self.file, 'r', encoding='utf-8') as k:
+    def import_data(file):
+        with open(file, 'r', encoding='utf-8') as k:
             lines = k.readlines()
             lst1 = []
             list_notes = []
@@ -30,7 +30,7 @@ class Download():
             return list_notes    
                 
 
-p = Printer
-imp = Download('SystemDate\\test.csv', 'SystemDate\\save_count.txt')
-p.print_list_notes(imp.import_data())
+# p = Printer
+# imp = Download('SystemDate\\save_notes.csv', 'SystemDate\\save_count.txt')
+# p.print_list_notes(imp.import_data())
 # print(imp.import_count())

@@ -13,8 +13,8 @@ class Edit():
         for obj in list_notes:
             if (obj.title == title_for_del):
                 return obj
-            else:
-                print('Такой заметки не найдено!')
+        else:
+            print('Такой заметки не найдено!')
 
     def modify_title(obj: Note):
         add_title = input("Вветите новый заголовок: \n")
