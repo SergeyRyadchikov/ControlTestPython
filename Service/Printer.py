@@ -1,6 +1,3 @@
-
-
-
 class Printer():
 
     def print_note(obj):

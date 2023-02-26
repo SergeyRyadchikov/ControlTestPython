@@ -5,10 +5,10 @@ from Model.Note import Note
 class Add():
 
     def add(count):  
-        obj_note = Note(None, None, None, None) 
-        obj_note.id = count
-        obj_note.title = (input('Заголовок: \n'))
-        obj_note.message = (input('Текст: \n'))
-        obj_note.date_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+        id = count
+        title = (input('Заголовок: \n'))
+        message = (input('Текст: \n'))
+        date_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+        obj_note = Note(id, title, message, date_time) 
         return obj_note
 
