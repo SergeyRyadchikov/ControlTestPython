@@ -1,6 +1,8 @@
 
 from Model.Note import Note
 
+
+# Принимает от пользователя строку, если находит заметку с таким заголовком, то удаляет ее
 class Delete:
 
     def dell_note(list_notes: Note):
