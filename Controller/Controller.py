@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, 'Service')
 from Save import Save
 from Search import Search
 from Edit import Edit
@@ -5,8 +7,6 @@ from Printer import Printer
 from Delete import Delete
 from Download import Download
 from Add import Add
-import sys
-sys.path.insert(0, 'Service')
 
 
 class Controller():

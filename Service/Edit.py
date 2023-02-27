@@ -1,7 +1,8 @@
+from datetime import datetime
 from Printer import Printer
-from Note import Note
 import sys
 sys.path.insert(0, 'Model')
+from Note import Note
 
 
 class Edit():
@@ -20,6 +21,7 @@ class Edit():
         try:
             add_title = input("Вветите новый заголовок: \n")
             obj.title = f'{add_title}'
+            obj.date_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
             print('\nИзменения внесены!')
         except AttributeError:
             print ('Заметка с таким именем не найдена!')
@@ -29,6 +31,7 @@ class Edit():
         try:
             add_message = input("Вветите текст: \n")
             obj.message = f'{obj.message} {add_message}'
+            obj.date_time = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
             print('\nИзменения внесены!')
         except AttributeError:
             print ('Заметка с таким именем не найдена!')
